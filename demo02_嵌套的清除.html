@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>嵌套中的清除</title>
+		<style type="text/css">
+			#box1{
+				width: 300px;
+				border: 1px solid black;
+				background: pink;
+				/*height: 100px;*/
+				/*float: left;*/
+				/*overflow: hidden;*/
+				/*display: inline-block;*/
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+		元素的嵌套中：父容器没有设置高度，高度要看内容来决定。
+			div1：
+				宽度：300px
+				高度：看div2的高度
+				
+			div2：
+				宽度:100px
+				高度：100px
+		
+		一旦父容器中的子元素，浮动了，那么意味着子容器漂浮了，脱离了文档流。
+		导致父容器没有内容，来撑开高度。
+		
+		解决办法:
+		1.父元素固定宽高
+		
+		2.父容器也浮动起来
+		
+		3.父元素overflow属性
+
+		4.父元素设置display属性
+		
+		5.在父容器中，添加一个空的标签。在空标签上写清除clear。
+		
+		-->
+		<div id="box1">
+			<div id="box2">		
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</body>
+</html>

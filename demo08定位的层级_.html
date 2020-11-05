@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位的层级</title>
+		<style type="text/css">
+			#div2{
+				width: 100px;
+				height: 100px;
+				background: green;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				z-index: 2;
+			}
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: 1;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			当多个元素添加定位操作时，可能会出现叠加情况，
+			即在默认情况下后输出的HTML结构层级就会越高。
+
+			z-index: 定位层级与定位属性配套使用，用于调节层级的z-index属性，
+				其属性值用数字表示，数字越大，层级越高。
+		-->
+		
+		<div id="div2">
+			
+		</div>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

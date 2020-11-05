@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位</title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: pink;
+			}
+			#div2{
+				background: red;
+				position: absolute;
+			}
+			#div3{
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+	<!--
+		绝对顶位的注意点：
+			1.会脱离文档流，效果和浮动类似，会释放原来的空间。
+				默认的宽度是和父容器相同，但是绝对定位后，会改变宽度，宽度要看内容宽度了。
+			2.元素使用绝对定位，相对父容器。
+				必要的前提：父容器一定也是定位了的。
+				如果父容器没有定位，找爷爷。。。
+				最后相对窗口进行定位。
+	-->
+		<div id="div1">
+			
+		</div>
+		<div id="div2">
+			今天没有电
+		</div>
+		<div id="div3">
+			
+		</div>
+	</body>
+</html>

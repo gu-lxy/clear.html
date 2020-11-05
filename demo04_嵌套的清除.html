@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>嵌套的清除</title>
+		<style type="text/css">
+			#box1{width: 300px;border: 1px solid black; background: pink;}
+			#box2{width: 100px;height: 100px;background: red;
+			float: left;
+			}
+			
+			#box1:after{content: "";display: block;clear: both;}
+		</style>
+	</head>
+	<body>
+		<!--
+			step1：通过after伪类，在box1后面添加了一个空内容，相当于添加一个空标签。
+			step2：默认特点：内联的，可以通过display让它变成块级元素的特点。
+			step3：再通过clear，来清除之前的浮动的影响
+		-->
+		<div id="box1">
+			<div id="box2">	
+			</div>
+		</div>
+	</body>
+</html>

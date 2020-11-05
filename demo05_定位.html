@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位</title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				/*position: absolute;
+				left: 100px;
+				top: 100px;*/
+			}
+			#div2{
+				width: 50px;
+				height: 50px;
+				background: red;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+			
+			#div3{
+				width: 50px;
+				height: 50px;
+				background: yellowgreen;
+				position: fixed;
+				bottom: 50px;
+				right: 50px;
+			}
+		</style>
+	</head>
+	<body>
+
+<!--
+		定位：position：
+			用于元素在页面上的精准定位。
+			4个属性值
+			static：静态的，默认值。当position属性值为static时，可以将元素定位于静态位置。
+				静态位置就是各个元素在HTML文档流中默认的位置。
+				
+			relative：相对定位。相对于自己原来在页面上的位置。
+				注意点：没有脱离文档流，没有释放原来的空间。
+			
+			absolute：绝对定位。相对父容器。
+				注意点：
+					1.脱离了文档流。释放了原来的空间。
+					2.相对于父容器：也使用了定位。
+						如果父容器没有使用定位，那么就再找上一层，(找爷爷)
+						如果爷爷使用了定位，那么就相对于爷爷来进行定位
+						如果爷爷也没有使用定位，就再找上一层。。。
+						如果都没有使用定位，那么最后就想相对于浏览器窗口的左上角来定位。
+			
+			fixed：固定定位。用法同absolute类似，也是要脱离文档流。
+				相对于整个屏幕。
+			
+			
+			要配合：4个属性，控制位置的偏移量
+			top，上边顶部的距离
+			bottom，下边的距离
+			left，左侧的距离
+			right，右侧的距离
+		-->
+		<div id="div1">
+			<div id="div2">		
+			</div>
+			
+		</div>
+		
+		<div id="div3">
+			
+		</div>
+		
+		<script type="text/javascript">
+			for (var i = 1;i <= 100;i++) {
+				document.write(i+"<br />")
+			}
+		</script>
+		
+		
+	</body>
+</html>

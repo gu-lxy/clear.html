@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动的清除</title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 400px;
+				background: pink;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			#box1{
+				background: red;
+			}
+			#box2{
+				background: green;
+				float: right;
+			}
+			#box3{
+				background: blue;
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--
+		浮动的元素，会影响后面的元素的布局。
+		
+		有时不希望浮动的元素影响到后面元素的布局，就可以给后面的元素添加清除浮动的操作。
+		在CSS样式中通过clear属性，来设置清除浮动的操作。其有left、right和both三个属性值。
+
+		left:仅清除左侧的浮动
+		right:仅清除右侧的浮动
+		both：清除两侧的浮动
+	-->
+		<div id="box">
+			<div id="box1">
+				
+			</div>
+			<div id="box2">
+				
+			</div>
+			<div id="box3">
+				
+			</div>
+		</div>
+	</body>
+</html>
